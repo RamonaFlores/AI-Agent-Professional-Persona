@@ -7,155 +7,157 @@ sdk_version: 5.39.0
 
 # 🤖 AI Agent Professional Persona
 
-Un agente conversacional de IA que actúa como un profesional específico, respondiendo preguntas sobre experiencia, habilidades y proyectos de manera auténtica y personalizada.
+Hello! I'm Juan José Angarita Yela and today I present to you:
 
-## 📋 Tabla de Contenidos
+A conversational AI agent that acts as a specific professional, answering questions about experience, skills, and projects in an authentic and personalized manner.
 
-- [🎯 ¿Qué hace esta aplicación?](#-qué-hace-esta-aplicación)
-- [🚀 Deploy en Hugging Face Spaces](#-deploy-en-hugging-face-spaces)
-- [⚙️ Configuración Inicial](#️-configuración-inicial)
-- [🔧 Personalización para tu Perfil](#-personalización-para-tu-perfil)
-- [📁 Estructura del Proyecto](#-estructura-del-proyecto)
-- [🛠️ Funcionalidades Técnicas](#️-funcionalidades-técnicas)
-- [📊 Herramientas del Agente](#-herramientas-del-agente)
-- [🔐 Variables de Entorno](#-variables-de-entorno)
-- [📝 Uso y Ejemplos](#-uso-y-ejemplos)
-- [🔄 Actualización de Datos](#-actualización-de-datos)
-- [🐛 Solución de Problemas](#-solución-de-problemas)
-- [🤝 Contribuciones](#-contribuciones)
+## 📋 Table of Contents
 
-## 🎯 ¿Qué hace esta aplicación?
+- [🎯 What does this application do?](#-what-does-this-application-do)
+- [🚀 Deploy on Hugging Face Spaces](#-deploy-on-hugging-face-spaces)
+- [⚙️ Initial Configuration](#️-initial-configuration)
+- [🔧 Customization for Your Profile](#-customization-for-your-profile)
+- [📁 Project Structure](#-project-structure)
+- [🛠️ Technical Features](#️-technical-features)
+- [📊 Agent Tools](#-agent-tools)
+- [🔐 Environment Variables](#-environment-variables)
+- [📝 Usage and Examples](#-usage-and-examples)
+- [🔄 Data Updates](#-data-updates)
+- [🐛 Troubleshooting](#-troubleshooting)
+- [🤝 Contributions](#-contributions)
 
-Esta aplicación crea un **agente conversacional profesional** que:
+## 🎯 What does this application do?
 
-- **Actúa como tu representante digital** en tu sitio web personal
-- **Responde preguntas sobre tu experiencia** de manera auténtica
-- **Facilita conexiones profesionales** con visitantes interesados
-- **Registra interacciones importantes** para seguimiento
-- **Mantiene un tono profesional** consistente con tu personalidad
+This application creates a **professional conversational agent** that:
 
-### Casos de uso ideales:
-- **Profesionales independientes** que quieren automatizar consultas iniciales
-- **Consultores** que reciben muchas preguntas repetitivas
-- **Desarrolladores** que quieren mostrar su experiencia de forma interactiva
-- **Cualquier profesional** que busca generar leads cualificados
+- **Acts as your digital representative** on your personal website
+- **Answers questions about your experience** authentically
+- **Facilitates professional connections** with interested visitors
+- **Records important interactions** for follow-up
+- **Maintains a professional tone** consistent with your personality
 
-## 🚀 Deploy en Hugging Face Spaces
+### Ideal use cases:
+- **Independent professionals** who want to automate initial inquiries
+- **Consultants** who receive many repetitive questions
+- **Developers** who want to showcase their experience interactively
+- **Any professional** looking to generate qualified leads
 
-### Deploy Automático (Recomendado)
+## 🚀 Deploy on Hugging Face Spaces
 
-1. **Fork este repositorio** en tu cuenta de GitHub
-2. **Sube tu información personal** (ver sección de personalización)
-3. **Configura las variables de entorno** en Hugging Face
-4. **El deploy se hace automáticamente** cuando subas cambios
+### Automatic Deploy (Recommended)
 
-### Deploy Manual
+1. **Fork this repository** to your GitHub account
+2. **Upload your personal information** (see customization section)
+3. **Configure environment variables** in Hugging Face
+4. **Deploy happens automatically** when you push changes
+
+### Manual Deploy
 
 ```bash
-# Clona el repositorio
-git clone <tu-repositorio>
+# Clone the repository
+git clone <your-repository>
 
-# Instala dependencias
+# Install dependencies
 pip install -r requirements.txt
 
-# Configura variables de entorno
+# Configure environment variables
 cp .env.example .env
-# Edita .env con tus API keys
+# Edit .env with your API keys
 
-# Ejecuta localmente
+# Run locally
 python app.py
 
-# Para deploy en Hugging Face
-# Sube el código a tu repositorio de GitHub
-# Conecta con Hugging Face Spaces
+# For Hugging Face deploy
+# Push code to your GitHub repository
+# Connect with Hugging Face Spaces
 ```
 
-## ⚙️ Configuración Inicial
+## ⚙️ Initial Configuration
 
-### 1. Instalación de Dependencias
+### 1. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configuración de Variables de Entorno
+### 2. Configure Environment Variables
 
-Crea un archivo `.env` en la raíz del proyecto:
+Create a `.env` file in the project root:
 
 ```env
-# OpenAI API Key (requerido)
-OPENAI_API_KEY=sk-tu-api-key-de-openai
+# OpenAI API Key (required)
+OPENAI_API_KEY=sk-your-openai-api-key
 
-# Pushover Keys (opcional, para notificaciones)
-PUSHOVER_USER_KEY=tu-pushover-user-key
-PUSHOVER_API_KEY=tu-pushover-api-key
+# Pushover Keys (optional, for notifications)
+PUSHOVER_USER_KEY=your-pushover-user-key
+PUSHOVER_API_KEY=your-pushover-api-key
 ```
 
-### 3. Estructura de Archivos Personales
+### 3. Personal Files Structure
 
 ```
 me/
-├── linkedin.pdf      # Tu perfil de LinkedIn en PDF
-└── summary.txt       # Tu resumen profesional en texto
+├── linkedin.pdf      # Your LinkedIn profile in PDF
+└── summary.txt       # Your professional summary in text
 ```
 
-## 🔧 Personalización para tu Perfil
+## 🔧 Customization for Your Profile
 
-### Paso 1: Preparar tu Información
+### Step 1: Prepare Your Information
 
-#### A. Exportar LinkedIn a PDF
-1. Ve a tu perfil de LinkedIn
-2. Imprime la página (Ctrl+P / Cmd+P)
-3. Guarda como PDF
-4. Coloca el archivo en `me/linkedin.pdf`
+#### A. Export LinkedIn to PDF
+1. Go to your LinkedIn profile
+2. Print the page (Ctrl+P / Cmd+P)
+3. Save as PDF
+4. Place the file in `me/linkedin.pdf`
 
-#### B. Crear tu Resumen Profesional
-Crea un archivo `me/summary.txt` con:
+#### B. Create Your Professional Summary
+Create a `me/summary.txt` file with:
 
 ```txt
 Juan José Angarita Yela
-Desarrollador Full Stack con 5+ años de experiencia
+Full Stack Developer with 5+ years of experience
 
-EXPERIENCIA:
-- Senior Developer en TechCorp (2022-presente)
-- Full Stack Developer en StartupXYZ (2020-2022)
-- Junior Developer en DevStudio (2018-2020)
+EXPERIENCE:
+- Senior Developer at TechCorp (2022-present)
+- Full Stack Developer at StartupXYZ (2020-2022)
+- Junior Developer at DevStudio (2018-2020)
 
-HABILIDADES:
+SKILLS:
 - Frontend: React, Vue.js, TypeScript
 - Backend: Python, Node.js, Django
-- Base de datos: PostgreSQL, MongoDB
+- Database: PostgreSQL, MongoDB
 - DevOps: Docker, AWS, CI/CD
 
-EDUCACIÓN:
-- Ingeniería en Sistemas, Universidad XYZ
-- Certificaciones: AWS Solutions Architect, Google Cloud
+EDUCATION:
+- Systems Engineering, XYZ University
+- Certifications: AWS Solutions Architect, Google Cloud
 
-PROYECTOS DESTACADOS:
-- E-commerce platform con 10k+ usuarios
-- API REST para fintech startup
-- Sistema de gestión empresarial
+HIGHLIGHTED PROJECTS:
+- E-commerce platform with 10k+ users
+- REST API for fintech startup
+- Enterprise management system
 
-INTERESES:
-- Inteligencia Artificial
-- Arquitectura de software
+INTERESTS:
+- Artificial Intelligence
+- Software Architecture
 - Open Source
 ```
 
-### Paso 2: Personalizar el Código
+### Step 2: Customize the Code
 
-#### A. Cambiar el Nombre en `app.py`
+#### A. Change the Name in `app.py`
 
 ```python
 class Me:
     def __init__(self):
-        self.name="TU NOMBRE COMPLETO"  # Cambia aquí
-        # ... resto del código
+        self.name="YOUR FULL NAME"  # Change here
+        # ... rest of the code
 ```
 
-#### B. Ajustar el Prompt del Sistema
+#### B. Adjust the System Prompt
 
-En el método `system_prompt()` puedes modificar:
+In the `system_prompt()` method you can modify:
 
 ```python
 def system_prompt(self):
@@ -170,50 +172,50 @@ def system_prompt(self):
     - Education and certifications
     - Current projects and interests
 
-    # Puedes agregar instrucciones específicas aquí
-    - Always mention your expertise in [TU ÁREA]
-    - Highlight your experience with [TECNOLOGÍAS ESPECÍFICAS]
-    - Emphasize your passion for [INTERESES PARTICULARES]
+    # You can add specific instructions here
+    - Always mention your expertise in [YOUR AREA]
+    - Highlight your experience with [SPECIFIC TECHNOLOGIES]
+    - Emphasize your passion for [PARTICULAR INTERESTS]
 
-    # ... resto del prompt
+    # ... rest of the prompt
     """
     return system_prompt
 ```
 
-### Paso 3: Personalizar Herramientas (Opcional)
+### Step 3: Customize Tools (Optional)
 
-#### A. Modificar Notificaciones Pushover
+#### A. Modify Pushover Notifications
 
-Si quieres cambiar el formato de las notificaciones:
+If you want to change the notification format:
 
 ```python
 def record_user_details(email, name="Name not provided", notes="not provided"):
     """Tool to record user details """
     message = f"""
-    🎯 NUEVO INTERESADO EN TU PERFIL
+    🎯 NEW INTERESTED PERSON IN YOUR PROFILE
     
-    👤 Nombre: {name}
+    👤 Name: {name}
     📧 Email: {email}
-    📝 Notas: {notes}
+    📝 Notes: {notes}
     
-    ⏰ Fecha: {datetime.now().strftime('%Y-%m-%d %H:%M')}
+    ⏰ Date: {datetime.now().strftime('%Y-%m-%d %H:%M')}
     """
     pushover_notification(message)
     return {"recorded": "Ok"}
 ```
 
-#### B. Agregar Nuevas Herramientas
+#### B. Add New Tools
 
-Para agregar funcionalidades adicionales:
+To add additional functionalities:
 
 ```python
 def record_project_inquiry(project_type, budget, timeline):
-    """Registra consultas sobre proyectos específicos"""
-    message = f"Proyecto: {project_type}, Presupuesto: {budget}, Timeline: {timeline}"
+    """Records specific project inquiries"""
+    message = f"Project: {project_type}, Budget: {budget}, Timeline: {timeline}"
     pushover_notification(message)
     return {"recorded": "Project inquiry logged"}
 
-# Agregar a la lista de herramientas
+# Add to the tools list
 project_inquiry_json = {
     "name": "record_project_inquiry",
     "description": "Use when someone asks about hiring you for a project",
@@ -229,30 +231,30 @@ project_inquiry_json = {
 }
 ```
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 AI-Agent-Professional-Persona/
-├── app.py                    # Aplicación principal
-├── requirements.txt          # Dependencias Python
-├── pyproject.toml           # Configuración del proyecto
-├── uv.lock                  # Lock file de dependencias
-├── .env                     # Variables de entorno (crear)
-├── README.md               # Este archivo
-├── persona.ipynb           # Notebook de desarrollo
-└── me/                     # Carpeta con información personal
-    ├── linkedin.pdf        # Perfil de LinkedIn
-    └── summary.txt         # Resumen profesional
+├── app.py                    # Main application
+├── requirements.txt          # Python dependencies
+├── pyproject.toml           # Project configuration
+├── uv.lock                  # Dependency lock file
+├── .env                     # Environment variables (create)
+├── README.md               # This file
+├── persona.ipynb           # Development notebook
+└── me/                     # Folder with personal information
+    ├── linkedin.pdf        # LinkedIn profile
+    └── summary.txt         # Professional summary
 ```
 
-## 🛠️ Funcionalidades Técnicas
+## 🛠️ Technical Features
 
-### Arquitectura del Sistema
+### System Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Gradio UI     │    │   OpenAI API    │    │   Pushover API  │
-│   (Frontend)    │◄──►│   (LLM Core)    │◄──►│   (Notificaciones)│
+│   (Frontend)    │◄──►│   (LLM Core)    │◄──►│   (Notifications)│
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
          ▼                       ▼                       ▼
@@ -262,120 +264,120 @@ AI-Agent-Professional-Persona/
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
-### Flujo de Procesamiento
+### Processing Flow
 
-1. **Usuario envía mensaje** → Gradio UI
-2. **Sistema construye contexto** → PDF + Summary + Historial
-3. **OpenAI procesa** → LLM con herramientas disponibles
-4. **Herramientas se ejecutan** → Registro de datos/notificaciones
-5. **Respuesta generada** → Basada en perfil personal
-6. **UI actualiza** → Conversación continua
+1. **User sends message** → Gradio UI
+2. **System builds context** → PDF + Summary + History
+3. **OpenAI processes** → LLM with available tools
+4. **Tools execute** → Data recording/notifications
+5. **Response generated** → Based on personal profile
+6. **UI updates** → Continuous conversation
 
-## 📊 Herramientas del Agente
+## 📊 Agent Tools
 
 ### 1. `record_user_details`
-**Propósito:** Registrar visitantes interesados
+**Purpose:** Record interested visitors
 
-**Cuándo se usa:**
-- Alguien proporciona su email
-- Menciona interés en colaborar
-- Solicita más información
+**When used:**
+- Someone provides their email
+- Mentions interest in collaboration
+- Requests more information
 
-**Datos registrados:**
-- Email del visitante
-- Nombre (si proporcionado)
-- Notas de la conversación
+**Data recorded:**
+- Visitor's email
+- Name (if provided)
+- Conversation notes
 
 ### 2. `record_unknown_question`
-**Propósito:** Registrar preguntas no respondidas
+**Purpose:** Record unanswered questions
 
-**Cuándo se usa:**
-- Pregunta fuera del contexto profesional
-- Información no disponible en el perfil
-- Consultas técnicas muy específicas
+**When used:**
+- Question outside professional context
+- Information not available in profile
+- Very specific technical queries
 
-**Beneficios:**
-- Identificar gaps en tu información
-- Mejorar el perfil profesional
-- Entender qué preguntan los visitantes
+**Benefits:**
+- Identify gaps in your information
+- Improve professional profile
+- Understand what visitors ask
 
-## 🔐 Variables de Entorno
+## 🔐 Environment Variables
 
-### Requeridas
+### Required
 
 ```env
 OPENAI_API_KEY=sk-...
 ```
-- **Obtener en:** https://platform.openai.com/api-keys
-- **Uso:** Procesamiento de lenguaje natural
-- **Costo:** ~$0.01-0.10 por conversación
+- **Get at:** https://platform.openai.com/api-keys
+- **Use:** Natural language processing
+- **Cost:** ~$0.01-0.10 per conversation
 
-### Opcionales
+### Optional
 
 ```env
 PUSHOVER_USER_KEY=u_...
 PUSHOVER_API_KEY=token_...
 ```
-- **Obtener en:** https://pushover.net/
-- **Uso:** Notificaciones push de interacciones
-- **Alternativa:** Email, Slack, Discord webhooks
+- **Get at:** https://pushover.net/
+- **Use:** Push notifications of interactions
+- **Alternative:** Email, Slack, Discord webhooks
 
-## 📝 Uso y Ejemplos
+## 📝 Usage and Examples
 
-### Ejemplos de Conversaciones
+### Conversation Examples
 
-#### Pregunta sobre experiencia:
+#### Question about experience:
 ```
-Usuario: "¿Cuántos años de experiencia tienes en React?"
-Agente: "Tengo 3 años de experiencia desarrollando aplicaciones con React. He trabajado en proyectos que incluyen e-commerce, dashboards administrativos y aplicaciones móviles híbridas. Mi experiencia incluye React Hooks, Context API, Redux y integración con APIs REST."
-```
-
-#### Consulta sobre proyectos:
-```
-Usuario: "¿Qué tipo de proyectos has desarrollado?"
-Agente: "He desarrollado una variedad de proyectos, desde aplicaciones web empresariales hasta soluciones de e-commerce. Mi proyecto más destacado fue una plataforma de gestión de inventarios que procesaba más de 10,000 transacciones diarias. También he trabajado en sistemas de análisis de datos y APIs para fintech."
+User: "How many years of experience do you have in React?"
+Agent: "I have 3 years of experience developing applications with React. I've worked on projects including e-commerce, administrative dashboards, and hybrid mobile applications. My experience includes React Hooks, Context API, Redux, and REST API integration."
 ```
 
-#### Solicitud de contacto:
+#### Project inquiry:
 ```
-Usuario: "Me interesa trabajar contigo, mi email es juan@empresa.com"
-Agente: "¡Excelente! Me encantaría explorar oportunidades de colaboración. He registrado tu información y me pondré en contacto contigo pronto para discutir los detalles de tu proyecto. Mientras tanto, ¿podrías contarme un poco más sobre lo que tienes en mente?"
+User: "What type of projects have you developed?"
+Agent: "I've developed a variety of projects, from enterprise web applications to e-commerce solutions. My most outstanding project was an inventory management platform that processed more than 10,000 daily transactions. I've also worked on data analysis systems and APIs for fintech."
 ```
 
-### Comandos Útiles
+#### Contact request:
+```
+User: "I'm interested in working with you, my email is juan@company.com"
+Agent: "Excellent! I'd love to explore collaboration opportunities. I've recorded your information and will contact you soon to discuss the details of your project. Meanwhile, could you tell me a bit more about what you have in mind?"
+```
+
+### Useful Commands
 
 ```bash
-# Ejecutar localmente
+# Run locally
 python app.py
 
-# Ejecutar con puerto específico
+# Run with specific port
 python app.py --port 8080
 
-# Ejecutar con debug
+# Run with debug
 python app.py --debug
 
-# Limpiar caché de Gradio
+# Clear Gradio cache
 rm -rf ~/.cache/gradio
 ```
 
-## 🔄 Actualización de Datos
+## 🔄 Data Updates
 
-### Actualizar Información del Perfil
+### Update Profile Information
 
-1. **Reemplazar `me/linkedin.pdf`** con tu perfil actualizado
-2. **Editar `me/summary.txt`** con información nueva
-3. **Reiniciar la aplicación** para cargar cambios
+1. **Replace `me/linkedin.pdf`** with your updated profile
+2. **Edit `me/summary.txt`** with new information
+3. **Restart the application** to load changes
 
-### Actualizar Prompt del Sistema
+### Update System Prompt
 
 ```python
-# En app.py, método system_prompt()
+# In app.py, system_prompt() method
 def system_prompt(self):
-    # Agregar nuevas instrucciones
+    # Add new instructions
     additional_instructions = """
-    - Siempre menciona tu experiencia en [NUEVA TECNOLOGÍA]
-    - Destaca tu trabajo en [NUEVO PROYECTO]
-    - Enfatiza tu interés en [NUEVA ÁREA]
+    - Always mention your experience in [NEW TECHNOLOGY]
+    - Highlight your work on [NEW PROJECT]
+    - Emphasize your interest in [NEW AREA]
     """
     
     system_prompt = f"""
@@ -385,15 +387,15 @@ def system_prompt(self):
     return system_prompt
 ```
 
-### Agregar Nuevas Herramientas
+### Add New Tools
 
 ```python
-# 1. Definir nueva función
+# 1. Define new function
 def record_meeting_request(date, topic):
-    pushover_notification(f"Reunión solicitada: {topic} para {date}")
+    pushover_notification(f"Meeting requested: {topic} for {date}")
     return {"recorded": "Meeting request logged"}
 
-# 2. Crear JSON de herramienta
+# 2. Create tool JSON
 meeting_request_json = {
     "name": "record_meeting_request",
     "description": "Use when someone requests a meeting",
@@ -407,119 +409,119 @@ meeting_request_json = {
     }
 }
 
-# 3. Agregar a lista de herramientas
+# 3. Add to tools list
 tools.append({"type": "function", "function": meeting_request_json})
 ```
 
-## 🐛 Solución de Problemas
+## 🐛 Troubleshooting
 
-### Problemas Comunes
+### Common Problems
 
-#### 1. Error de API Key
+#### 1. API Key Error
 ```
 Error: Invalid API key
 ```
-**Solución:**
-- Verificar que `OPENAI_API_KEY` esté correcta
-- Verificar que tenga saldo en la cuenta
-- Verificar que la key tenga permisos de chat
+**Solution:**
+- Verify `OPENAI_API_KEY` is correct
+- Verify account has balance
+- Verify key has chat permissions
 
-#### 2. Error de PDF
+#### 2. PDF Error
 ```
 Error: Could not read PDF
 ```
-**Solución:**
-- Verificar que `me/linkedin.pdf` existe
-- Asegurar que el PDF no esté corrupto
-- Verificar permisos de lectura
+**Solution:**
+- Verify `me/linkedin.pdf` exists
+- Ensure PDF is not corrupted
+- Verify read permissions
 
-#### 3. Error de Pushover
+#### 3. Pushover Error
 ```
 Error: Pushover notification failed
 ```
-**Solución:**
-- Verificar `PUSHOVER_USER_KEY` y `PUSHOVER_API_KEY`
-- Verificar conexión a internet
-- Las notificaciones son opcionales, la app funciona sin ellas
+**Solution:**
+- Verify `PUSHOVER_USER_KEY` and `PUSHOVER_API_KEY`
+- Verify internet connection
+- Notifications are optional, app works without them
 
 #### 4. Gradio Cache Issues
 ```
 Error: Old Space redirects
 ```
-**Solución:**
+**Solution:**
 ```bash
-# Limpiar caché
+# Clear cache
 rm -rf ~/.cache/gradio
 
-# O usar script automático
-python deploy_new_space.py nuevo-nombre-space
+# Or use automatic script
+python deploy_new_space.py new-space-name
 ```
 
 ### Debug Mode
 
-Para activar modo debug:
+To enable debug mode:
 
 ```python
-# En app.py, línea final
+# In app.py, final line
 gr.ChatInterface(me.chat, type="messages").launch(
     share=True,
-    debug=True  # Agregar esta línea
+    debug=True  # Add this line
 )
 ```
 
-### Logs Detallados
+### Detailed Logs
 
 ```python
-# Agregar logging detallado
+# Add detailed logging
 import logging
 logging.basicConfig(level=logging.DEBUG)
 
-# En la función handle_tool_calls
+# In handle_tool_calls function
 def handle_tool_calls(self, tool_calls):
     logging.debug(f"Tool calls received: {tool_calls}")
-    # ... resto del código
+    # ... rest of the code
 ```
 
-## 🤝 Contribuciones
+## 🤝 Contributions
 
-### Cómo Contribuir
+### How to Contribute
 
-1. **Fork el repositorio**
-2. **Crea una rama** para tu feature
-3. **Haz tus cambios**
-4. **Añade tests** si es necesario
-5. **Envía un Pull Request**
+1. **Fork the repository**
+2. **Create a branch** for your feature
+3. **Make your changes**
+4. **Add tests** if necessary
+5. **Send a Pull Request**
 
-### Mejoras Sugeridas
+### Suggested Improvements
 
-- [ ] Integración con CRM (HubSpot, Salesforce)
-- [ ] Analytics de conversaciones
-- [ ] Múltiples idiomas
-- [ ] Integración con calendario
-- [ ] Chatbot con memoria de conversación
-- [ ] Exportación de leads a CSV
-- [ ] Dashboard de métricas
-- [ ] Integración con LinkedIn API
+- [ ] CRM integration (HubSpot, Salesforce)
+- [ ] Conversation analytics
+- [ ] Multiple languages
+- [ ] Calendar integration
+- [ ] Chatbot with conversation memory
+- [ ] Lead export to CSV
+- [ ] Metrics dashboard
+- [ ] LinkedIn API integration
 
-### Reportar Bugs
+### Report Bugs
 
-1. **Verificar** que el bug no esté ya reportado
-2. **Crear issue** con descripción detallada
-3. **Incluir** logs y pasos para reproducir
-4. **Especificar** versión y entorno
-
----
-
-## 📞 Soporte
-
-- **Issues:** Usa GitHub Issues para bugs y features
-- **Discussions:** Para preguntas generales
-- **Email:** [tu-email@dominio.com]
-
-## 📄 Licencia
-
-MIT License - Ver [LICENSE](LICENSE) para detalles.
+1. **Verify** the bug isn't already reported
+2. **Create issue** with detailed description
+3. **Include** logs and steps to reproduce
+4. **Specify** version and environment
 
 ---
 
-**¿Te gustó este proyecto? ¡Dale una ⭐ en GitHub!**
+## 📞 Support
+
+- **Issues:** Use GitHub Issues for bugs and features
+- **Discussions:** For general questions
+- **Email:** [your-email@domain.com]
+
+## 📄 License
+
+MIT License - See [LICENSE](LICENSE) for details.
+
+---
+
+**Did you like this project? Give it a ⭐ on GitHub!**
