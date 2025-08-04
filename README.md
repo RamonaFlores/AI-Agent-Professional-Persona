@@ -516,7 +516,7 @@ def handle_tool_calls(self, tool_calls):
 
 - **Issues:** Use GitHub Issues for bugs and features
 - **Discussions:** For general questions
-- **Email:** [your-email@domain.com]
+- **Email:** [angaritayelaj@gmail.com]
 
 ## 📄 License
 
